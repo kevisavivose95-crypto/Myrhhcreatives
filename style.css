@@ -256,3 +256,35 @@ footer {
         grid-template-columns: 1fr; /* Single column on mobile */
     }
 }
+.hero-image-overlay {
+    /* ... existing styles ... */
+    opacity: 0.25; /* Slightly more visible */
+    filter: grayscale(80%) blur(3px) brightness(1.1); /* Less grayscale, less blur, slightly brighter */
+.hero-motto {
+    font-size: 1.4rem; /* Slightly larger */
+    font-weight: 400; /* A bit bolder */
+    /* ... existing styles ... */
+/* Hero title animation */
+.hero-title {
+    /* ... existing styles ... */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out 0.5s forwards; /* 0.5s delay */
+}
+.hero-motto {
+    /* ... existing styles ... */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out 0.7s forwards; /* Slightly more delay */
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
